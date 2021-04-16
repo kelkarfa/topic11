@@ -12,3 +12,25 @@
 
 6. Pass in your saved github repository link. 
 
+<script>
+          
+		  let div = document.querySelectorAll("div a");
+        
+        window.addEventListener("scroll", event => {
+          
+            let fromTop = window.scrollY+5;
+        
+          div.forEach(link => {
+            let div = document.querySelector(link.hash);
+        
+            if (
+              div.offsetTop <= fromTop &&
+              div.offsetTop + div.offsetHeight > fromTop
+            ) {
+              link.classList.add("current");
+            } else {
+              link.classList.remove("current");
+            }
+          });
+        });
+</script>
