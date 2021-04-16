@@ -1,36 +1,62 @@
-
+html {
+	scroll-behavior: smooth;
+	background-color:blanchedalmond;
+}
 
 body {
 	margin: 0;
 	font-family: Roboto;
-	font-size: 16px;
+	font-size: 16px;	
 }
 
+header h1 {
+	text-align: center;
+	color:darkred;
+	padding: 4rem;
+	
+}
 #menubar {
 	background-color: #e74c3c;
 	text-align: center;
 	padding: 20px 0;
 	position: sticky;
 	top: 0;
+	white-space: nowrap;
+	
+	
 }
 
 #menubar a {
 	display: inline-block;
 	vertical-align: middle;
 	margin: 0 20px 0 0;
+	padding: 1em 1em;
 	font-weight: 700;
-	color: white;
+	color:white;
 	text-decoration: none;
+
 }
 
 #menubar a:hover {
-	text-decoration: underline;
+	text-decoration: none;
 }
-
+a:focus, a:hover {
+	font-style: italic;
+}
 #menubar a:last-child {
 	margin: 0;
 }
-
+#menubar a.current {
+    background: black;
+  }
+  
+  /* Only stick if you can fit */
+  @media (min-height: 300px) {
+    #menubar {
+      position: sticky;
+      top: 0;
+    }
+  }
 
 .section {
 	height: 100vh;
@@ -38,7 +64,7 @@ body {
 	text-align: center;
 	font-size: 30px;
 	font-weight: 700;
-	color: white;
+	color:white;
 }
 
 #section-1 {
@@ -53,7 +79,7 @@ body {
 	background-color: #9b59b6;
 }
 #section-4 {
-	background-color:red;
+	background-color:darksalmon;
 }
 
 #section-5 {
@@ -61,7 +87,6 @@ body {
 }
 
 #section-6 {
-	background-color: blue;
+	background-color:goldenrod;
 }
-
 

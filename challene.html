@@ -4,10 +4,14 @@
 <meta charset="UTF-8" />
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
 <title>CSS Smooth Scroll : Demo</title>
-<link rel="stylesheet" type="text/css" href="challenge.css"/>
+<link rel="stylesheet" type="text/css" href="challenge.css">
+
 
 </head>
 <body>
+	<header>
+        <h1>Sticky Smooth Active Navbar</h1>
+      </header>
 
 <div id="menubar">
 	<a href="#section-1">Go to section 1</a>
@@ -26,6 +30,28 @@
 <div id="section-6" class="section">Section 6</div>
 
 
+<script>
+          
+	let mainNavLinks = document.querySelectorAll("div a");
+	
+	window.addEventListener("scroll", event => {
+	  
+		let fromTop = window.scrollY+5;
+	
+	  mainNavLinks.forEach(link => {
+		let section = document.querySelector(link.hash);
+	
+		if (
+		  section.offsetTop <= fromTop &&
+		  section.offsetTop + section.offsetHeight > fromTop
+		) {
+		  link.classList.add("current");
+		} else {
+		  link.classList.remove("current");
+		}
+	  });
+	});
+</script>
 
 </body>
 </html>
